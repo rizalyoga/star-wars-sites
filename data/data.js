@@ -9,7 +9,6 @@ export const fetchDetailCharacter = async (idCharacter) => {
 };
 
 export const fetchDetailStarship = async (idStarship) => {
-  console.log(idStarship);
   const res = await fetch(`https://swapi.dev/api/starships/${idStarship}`);
   return res.json();
 };

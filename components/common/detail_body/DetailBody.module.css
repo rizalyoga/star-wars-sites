@@ -1,0 +1,29 @@
+.detail__content_container {
+  display: flex;
+  gap: 10px;
+}
+
+.detail__iamage_content {
+  background: #5a5d6ddc;
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.detail__desc_content {
+  background: #5a5d6ddc;
+  border-radius: 3px;
+  padding: 20px;
+  width: 100%;
+  min-width: 300px;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .detail__content_container {
+    flex-direction: column;
+  }
+}
