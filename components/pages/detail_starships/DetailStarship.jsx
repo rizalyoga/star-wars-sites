@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 // Data
 import { fetchDetailStarship } from "../../../data/data";
@@ -8,6 +9,7 @@ import { fetchDetailStarship } from "../../../data/data";
 import Layout from "../../../layout/Layout";
 import TitleContent from "../../common/title_content/TitleContent";
 import DetailBody from "../../common/detail_body/DetailBody";
+import sponsore from "../../../public/star_wars_banner.webp";
 
 const DetailStarship = () => {
   const [dataStarship, setDataStarship] = useState([]);
@@ -24,7 +26,7 @@ const DetailStarship = () => {
         setLoading(false);
       });
     }
-  }, []);
+  }, [id]);
 
   return (
     <Layout>
@@ -32,8 +34,11 @@ const DetailStarship = () => {
         <main className="main">
           <div className="inner_container">
             <TitleContent title={dataStarship.name} />
+            <DetailBody data={dataStarship} loading={loading} />
+            <div className="sponsore_container">
+              <Image src={sponsore} alt="iklan" />
+            </div>
           </div>
-          <DetailBody data={dataStarship} loading={loading} />
         </main>
       </div>
     </Layout>
