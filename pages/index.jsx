@@ -8,7 +8,7 @@ export default function Home({ dataFilms }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`https://swapi.dev/api/films/`);
   const dataFilms = await res.json();
   return {

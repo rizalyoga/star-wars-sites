@@ -9,7 +9,7 @@ const StarshipsPage = ({ dataStarships }) => {
 
 export default StarshipsPage;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`https://swapi.dev/api/starships/`);
   const dataStarships = await res.json();
   return {

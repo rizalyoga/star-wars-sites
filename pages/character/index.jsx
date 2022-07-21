@@ -9,7 +9,7 @@ const CharacterPage = ({ dataCharacters }) => {
 
 export default CharacterPage;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`https://swapi.dev/api/people/`);
   const dataCharacters = await res.json();
   return {
