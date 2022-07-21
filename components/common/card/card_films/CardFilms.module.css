@@ -1,0 +1,27 @@
+.card__container {
+  /* width: 200px; */
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card__container:hover {
+  box-shadow: -3px 2px 23px -6px rgba(235, 235, 235, 0.75);
+  -webkit-box-shadow: -3px 2px 23px -6px rgba(230, 230, 230, 0.75);
+  -moz-box-shadow: -3px 2px 23px -6px rgba(255, 238, 238, 0.75);
+}
+
+.card__image_film {
+  background-color: rgba(255, 227, 71, 0.959);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+.card__title_film {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-color: #1b1b1b;
+  border-top: 2px solid salmon;
+}

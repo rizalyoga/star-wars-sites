@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* background: #252839; */
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(/space.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  /* background: red; */
+  padding: 0 5px;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.inner_container {
+  margin-top: 80px;
+}
+
+.card_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.sponsore_container {
+  margin-top: 30px;
+}
+
+/* -------------------------------- nprogress ------------------------------- */
+#nprogress .bar {
+  background: #f5da45 !important;
+  height: 4px !important;
+
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #f5da45, 0 0 5px #f5da45 !important;
+}
+
+/* ------------------------ Responsive card container ----------------------- */
+@media (max-width: 770px) {
+  .card_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 565px) {
+  .card_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 430px) {
+  .card_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
