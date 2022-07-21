@@ -3,8 +3,12 @@ import styles from "./CardDetail.module.css";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+// Component
+import LoadingSpinner from "../../loading/LoadingSpinner";
+
 const CardDetail = ({ data }) => {
   const [dataCharacter, setdataCharacter] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
 
@@ -15,13 +19,21 @@ const CardDetail = ({ data }) => {
   };
 
   useEffect(() => {
-    fetchData().then((res) => setdataCharacter(res));
+    setLoading(true);
+    fetchData().then((res) => {
+      setdataCharacter(res);
+      setLoading(false);
+    });
   }, []);
 
   // Function for direction
   const toDetailCharacter = (id) => {
     router.push(`/character/${id}`);
   };
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <div
